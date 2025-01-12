@@ -1,0 +1,138 @@
+.primary {
+    background-color: #FF6600;
+}
+
+.logo {
+    height: auto;
+    width: 150px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 4px 8px;
+    padding-bottom: 15px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.header-transparent {
+    background-color: rgba(0, 0, 0, 0.588);
+    transition: background-color 0.3s ease;
+}
+
+header.primary {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+header.primary.hide {
+    opacity: 0;
+}
+
+.ideas {
+    position: relative;
+    height: 300px;
+    background-image: url(Coffe.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.perSelect {
+    width: 90px;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.card {
+    width: 270px;
+    height: 290px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    color: gray;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.pagination select {
+    margin: 0 10px;
+}
+
+.pagination .active {
+    background-color: #FF6600;
+    color: white;
+}

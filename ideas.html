@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="primary">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="ideas.html" class="-m-1.5 p-1.5">
+              <img class="logo" src="logo.png" alt="">
+            </a>
+          </div>
+          <div class="lg:flex lg:gap-x-12 lg:justify-end">
+            <a href="blank.html" class="nav-link text-lg/6 text-white">Work</a>
+            <a href="blank.html" class="nav-link text-lg/6 text-white">About</a>
+            <a href="blank.html" class="nav-link text-lg/6 text-white">Services</a>
+            <a href="ideas.html" class="nav-link text-lg/6 text-white">Ideas</a>
+            <a href="blank.html" class="nav-link text-lg/6 text-white">Careers</a>
+            <a href="blank.html" class="nav-link text-lg/6 text-white">Contact</a>
+          </div>
+        </nav>  
+    </header>
+    
+    <div class="ideas">
+        <h1 class="block text-6xl">Ideas</h1>
+        <p class="block mt-1">Where all our great things begin</p>
+    </div>
+
+    <div class="mt-6 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <span id="showingText">Showing 0-10 of 0</span>
+        </div>
+        <div class="lg:flex lg:gap-x-12 lg:justify-end">
+            <label>Show per page:</label>
+            <select id="perPageSelect" class="perSelect">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+    
+            <label>Sort by:</label>
+            <select id="sortSelect" class="perSelect">
+              <option value="-published_at">Newest</option>
+              <option value="published_at">Oldest</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="card-container mx-auto flex max-w-7xl items-center justify-start lg:px-8" aria-label="Global" id="ideasContainer">
+        <!-- Cards will be injected here -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be injected here -->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="javas.js"></script>
+</body>
+</html>
